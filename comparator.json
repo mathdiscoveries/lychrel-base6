@@ -1,0 +1,19 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "LychrelBase6.infinite_lychrel6",
+    "LychrelBase6.xValue_lychrel",
+    "LychrelBase6.xValue_step12",
+    "LychrelBase6.xValue_strictMono",
+    "LychrelBase6.xValue_zero_eq",
+    "LychrelBase6.yValue_lychrel",
+    "LychrelBase6.yValue_step12",
+    "LychrelBase6.yValue_strictMono",
+    "LychrelBase6.yValue_zero_eq",
+    "LychrelBase6.xValue_disjoint_yValue"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

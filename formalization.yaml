@@ -1,0 +1,110 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Two infinite families of base-6 Lychrel numbers"
+  description: >-
+    Unconditional Lean 4 formalization of two explicit, strictly increasing,
+    pairwise disjoint infinite families x(m) and y(m) (m >= 0) of base-6
+    Lychrel numbers under repeated base-6 reverse-and-add T(n) = n + rev_6(n).
+    Family 1 has 110 + 2m base-6 digits (smallest seed x(0) with 86 decimal
+    digits) and Family 2 has 108 + 2m base-6 digits (smallest seed y(0) with
+    84 decimal digits), with middle blocks linked by base-6 digit complement
+    d |-> 5 - d. Both satisfy the exact period-12 self-similar recurrence
+    T^[12](x(m)) = x(m + 3) and T^[12](y(m)) = y(m + 3) while avoiding all
+    base-6 palindromes, proving unconditionally that infinitely many base-6
+    Lychrel numbers exist.
+  authors:
+    - "Tyler Hughes"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Tyler Hughes"
+
+classification:
+  arxiv:
+    - "math.NT"
+  msc2020:
+    - "11A63"
+    - "11B37"
+
+sources:
+  - title: "Two infinite families of base-6 Lychrel numbers"
+    authors:
+      - "Tyler Hughes"
+    id: "https://mathdiscoveries.org/results/lychrel-base-6-families.html"
+    type: "original-proof"
+    relationship: "other"
+    note: >-
+      Original proof and formalization discovered and verified by AI research
+      agents built and directed by Tyler Hughes. Not found in the literature
+      searches logged (reference works, OEIS A060382, arXiv, academic indexes,
+      code repositories, and a 5-query Google Scholar sweep on 2026-11-22).
+    author_endorsement: "participated"
+  - title: "dew-web/lychrel-self-similar"
+    authors:
+      - "Y. Kusayama"
+    id: "https://github.com/dew-web/lychrel-self-similar"
+    type: "other"
+    relationship: "background"
+    note: >-
+      Finite-state carry-automaton formulation whose October 2026 search
+      reached the two base-6 period-12 cases up to 16,777,216 states
+      ("CAPACITY EXCEEDED (inconclusive)"); our search reimplemented the
+      method from its written description and located the center at
+      287,670,768 states.
+    author_endorsement: "not-contacted"
+  - title: "Base-b Lychrel numbers and self-similar palindromic-avoiding families"
+    authors:
+      - "David Seal"
+    type: "web discussion"
+    location: "rec.puzzles, January 1996 (archived on p196.org and MathPages)"
+    relationship: "background"
+    author_endorsement: "n/a"
+  - title: "OEIS A060382: Smallest Lychrel number in base n"
+    id: "https://oeis.org/A060382"
+    type: "web discussion"
+    relationship: "background"
+    author_endorsement: "n/a"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Complete unconditional proof of the existence of infinitely many base-6
+    Lychrel numbers via both explicit period-12 families x(m) and y(m),
+    including the carry-automaton soundness engine (Lemma C and Lemma S),
+    direct kernel verification for small indices m in {0..5}, strict
+    monotonicity, pairwise disjointness, exact base-10 seed identities, and
+    complement duality/orbit structure in LychrelBase6.DualityAndCounting.
+    Does not resolve whether smaller base-6 Lychrel suspects (such as the
+    smallest conjectured base-6 seed) are Lychrel.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+    - "propext"
+    - "Quot.sound"
+    - "Classical.choice"
+
+automation:
+  methods:
+    - method: "agent"
+      models:
+        - "Claude Opus"
+        - "GPT-5"
+      framework: "Multi-agent research and Lean formalization system built and directed by Tyler Hughes"
+      tool_setup: >-
+        Independent reimplementation of the finite-state carry-automaton search
+        in compiled code to find the period-12 base-6 templates, followed by
+        agent-authored Lean 4.35 / Mathlib formalization and independent
+        falsifier/reviewer audits.
+  notes: >-
+    Tyler Hughes built, configured, and directed the research and verification
+    agents and takes maintainer responsibility for the formalization.
+
+review:
+  status: "agent-reviewed"
+  notes: >-
+    Checked with Lean 4.35.0 kernel build, full #print axioms audit
+    (LychrelBase6/Verify.lean; zero sorry, zero native_decide), and
+    independent Python exact-arithmetic replay of the 12-step orbits. Not yet
+    human peer-reviewed.
