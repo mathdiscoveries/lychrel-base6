@@ -15,10 +15,10 @@ project:
     base-6 palindromes, proving unconditionally that infinitely many base-6
     Lychrel numbers exist.
   authors:
-    - "Tyler Hughes"
+    - "Tyler B. Hughes"
   license: "Apache-2.0"
   responsible_maintainers:
-    - "Tyler Hughes"
+    - "Tyler B. Hughes"
 
 classification:
   arxiv:
@@ -30,13 +30,13 @@ classification:
 sources:
   - title: "Two infinite families of base-6 Lychrel numbers"
     authors:
-      - "Tyler Hughes"
+      - "Tyler B. Hughes"
     id: "https://mathdiscoveries.org/results/lychrel-base-6-families.html"
     type: "original-proof"
     relationship: "other"
     note: >-
       Original proof and formalization discovered and verified by AI research
-      agents built and directed by Tyler Hughes. Not found in the literature
+      agents built and directed by Tyler B. Hughes. Not found in the literature
       searches logged (reference works, OEIS A060382, arXiv, academic indexes,
       code repositories, and a 5-query Google Scholar sweep on 2026-11-22).
     author_endorsement: "participated"
@@ -91,14 +91,14 @@ automation:
       models:
         - "Claude Opus"
         - "GPT-5"
-      framework: "Multi-agent research and Lean formalization system built and directed by Tyler Hughes"
+      framework: "Multi-agent research and Lean formalization system built and directed by Tyler B. Hughes"
       tool_setup: >-
         Independent reimplementation of the finite-state carry-automaton search
         in compiled code to find the period-12 base-6 templates, followed by
         agent-authored Lean 4.35 / Mathlib formalization and independent
         falsifier/reviewer audits.
   notes: >-
-    Tyler Hughes built, configured, and directed the research and verification
+    Tyler B. Hughes built, configured, and directed the research and verification
     agents and takes maintainer responsibility for the formalization.
 
 review:
