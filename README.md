@@ -1,5 +1,7 @@
 # Two Infinite Families of Base-6 Lychrel Numbers
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24490763.svg)](https://doi.org/10.5281/zenodo.24490763)
+
 Unconditional Lean 4 (`v4.35.0`) formalization of two explicit, strictly
 increasing, pairwise disjoint infinite families of base-6 Lychrel numbers
 under repeated base-6 reverse-and-add $T(n) = n + \operatorname{rev}_6(n)$.
