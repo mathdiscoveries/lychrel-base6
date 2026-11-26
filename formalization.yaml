@@ -28,17 +28,29 @@ classification:
     - "11B37"
 
 sources:
-  - title: "Two infinite families of base-6 Lychrel numbers"
+  - title: "Two Infinite Families of Base-6 Lychrel Numbers: Carry Proofs and Six-Orbit Counts"
     authors:
       - "Tyler B. Hughes"
-    id: "https://mathdiscoveries.org/results/lychrel-base-6-families.html"
-    type: "original-proof"
-    relationship: "other"
+    id: "https://mathdiscoveries.org/results/lychrel-base-6-families"
+    type: "paper"
+    location: "https://mathdiscoveries.org/results/lychrel-base-6-families"
+    relationship: "formalizes"
     note: >-
-      Original proof and formalization discovered and verified by AI research
-      agents built and directed by Tyler B. Hughes. Not found in the literature
-      searches logged (reference works, OEIS A060382, arXiv, academic indexes,
-      code repositories, and a 5-query Google Scholar sweep on 2026-11-22).
+      The companion paper. It states and proves in writing every compared
+      statement of this package (Theorems 1, 2 and 7, Corollaries 3 and 9, and
+      the values of x(0) and y(0) in Section 1; strict monotonicity of each
+      family is read off from the digit lengths 110 + 2m and 108 + 2m in its
+      definitions (1) and (2)), and the Lean work formalizes them; the
+      formalization presents no result that the paper does not. The external
+      sweep and search that found the center word (Proposition 10) are not
+      part of this package, and no proof here depends on them. Neither family
+      was found in the literature searches logged (reference works, OEIS
+      A060382, arXiv, academic indexes, code repositories, and a 5-query
+      Google Scholar sweep on 2026-11-22), with medium confidence, since
+      October 2026 community postings and informal or subscription channels
+      were not searched exhaustively. AI research agents built and directed by
+      Tyler B. Hughes generated and checked this work. No human mathematician
+      has yet refereed the proof.
     author_endorsement: "participated"
   - title: "dew-web/lychrel-self-similar"
     authors:
@@ -53,11 +65,12 @@ sources:
       method from its written description and located the center at
       287,670,768 states.
     author_endorsement: "not-contacted"
-  - title: "Base-b Lychrel numbers and self-similar palindromic-avoiding families"
+  - title: "Sporadic solutions for reverse-sum iterations"
     authors:
       - "David Seal"
+    id: "https://www.mathpages.com/home/dseal.htm"
     type: "web discussion"
-    location: "rec.puzzles, January 1996 (archived on p196.org and MathPages)"
+    location: "Usenet rec.puzzles (January 1996), archived on MathPages"
     relationship: "background"
     author_endorsement: "n/a"
   - title: "OEIS A060382: Smallest Lychrel number in base n"
@@ -106,5 +119,5 @@ review:
   notes: >-
     Checked with Lean 4.35.0 kernel build, full #print axioms audit
     (LychrelBase6/Verify.lean; zero sorry, zero native_decide), and
-    independent Python exact-arithmetic replay of the 12-step orbits. Not yet
-    human peer-reviewed.
+    independent Python exact-arithmetic replay of the 12-step orbits. No human
+    mathematician has yet refereed the proof.

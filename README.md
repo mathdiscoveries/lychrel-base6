@@ -29,4 +29,4 @@ Every theorem uses only Lean's standard axioms (`propext`, `Quot.sound`,
 `Classical.choice`), with zero `sorry` and zero `native_decide`.
 
 Prepared for submission to the [Palomar Registry](https://submit.palomar-registry.org/).
-Full companion write-up: <https://mathdiscoveries.org/results/lychrel-base-6-families.html>.
+Companion paper, which states and proves every compared statement: <https://mathdiscoveries.org/results/lychrel-base-6-families>.
