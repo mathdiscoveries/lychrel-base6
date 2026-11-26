@@ -30,3 +30,7 @@ Every theorem uses only Lean's standard axioms (`propext`, `Quot.sound`,
 
 Prepared for submission to the [Palomar Registry](https://submit.palomar-registry.org/).
 Companion paper, which states and proves every compared statement: <https://mathdiscoveries.org/results/lychrel-base-6-families>.
+
+Coverage by this package's Palomar comparison: of the companion paper's 10 main results, 2 are compared in Lean in full (20%; Theorems 1 and 2) and 1 in part (Corollary 3: every $x(m)$ and $y(m)$ is a base-6 Lychrel number, without its positivity and per-iterate form). Six more (Lemma 4, Theorem 5, Proposition 6, Theorems 7 and 8 and Corollary 9) are proved in this package's Lean library but not compared, though the compared statements include the disjointness of the two families and the infinitude of base-6 Lychrel numbers; Proposition 10 is by certificate only; Conjecture 11 is open and not counted.
+
+AI research agents built and directed by Tyler B. Hughes generated and checked this work. No human mathematician has yet refereed the proof.
