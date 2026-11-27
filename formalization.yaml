@@ -129,3 +129,57 @@ review:
     (LychrelBase6/Verify.lean; zero sorry, zero native_decide), and
     independent Python exact-arithmetic replay of the 12-step orbits. No human
     mathematician has yet refereed the proof.
+
+alignment:
+  namespace: "LychrelBase6"
+  statements:
+    - source: "There are infinitely many base-6 Lychrel numbers (the abstract's two infinite families; from Corollary 3 and the digit lengths in definitions (1) and (2))"
+      lean: "LychrelBase6.infinite_lychrel6"
+      module: "Challenge"
+      status: proved
+      note: "The set of base-6 Lychrel numbers is infinite."
+    - source: "Corollary 3, Family x(m): every x(m) is a base-6 Lychrel number"
+      lean: "LychrelBase6.xValue_lychrel"
+      module: "Challenge"
+      status: proved
+      note: "Compared without Corollary 3's positivity clause and its form for every forward iterate of the six seeds."
+    - source: "Theorem 1: T^12(x(m)) = x(m + 3) for every m >= 0"
+      lean: "LychrelBase6.xValue_step12"
+      module: "Challenge"
+      status: proved
+      note: "The period-12 return of Theorem 1; its non-palindromicity half follows from LychrelBase6.xValue_lychrel."
+    - source: "Family x(m) is strictly increasing (digit length 110 + 2m in definition (1))"
+      lean: "LychrelBase6.xValue_strictMono"
+      module: "Challenge"
+      status: proved
+      note: "StrictMono xValue."
+    - source: "Section 1: the decimal value of the smallest Family 1 seed x(0) (86 digits)"
+      lean: "LychrelBase6.xValue_zero_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact natural-number identity for x(0)."
+    - source: "Corollary 3, Family y(m): every y(m) is a base-6 Lychrel number"
+      lean: "LychrelBase6.yValue_lychrel"
+      module: "Challenge"
+      status: proved
+      note: "Compared without Corollary 3's positivity clause and its form for every forward iterate of the six seeds."
+    - source: "Theorem 2: T^12(y(m)) = y(m + 3) for every m >= 0"
+      lean: "LychrelBase6.yValue_step12"
+      module: "Challenge"
+      status: proved
+      note: "The period-12 return of Theorem 2; its non-palindromicity half follows from LychrelBase6.yValue_lychrel."
+    - source: "Family y(m) is strictly increasing (digit length 108 + 2m in definition (2))"
+      lean: "LychrelBase6.yValue_strictMono"
+      module: "Challenge"
+      status: proved
+      note: "StrictMono yValue."
+    - source: "Section 1: the decimal value of the smallest Family 2 seed y(0) (84 digits)"
+      lean: "LychrelBase6.yValue_zero_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact natural-number identity for y(0)."
+    - source: "The families x(m) and y(m) are disjoint (abstract; part of Theorem 7)"
+      lean: "LychrelBase6.xValue_disjoint_yValue"
+      module: "Challenge"
+      status: proved
+      note: "x(m) != y(n) for all m and n; Theorem 7's injectivity of all six forward trajectories is in the Lean library but not compared."
