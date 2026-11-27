@@ -9,19 +9,20 @@ project:
     Lychrel numbers under repeated base-6 reverse-and-add T(n) = n + rev_6(n).
     Family 1 has 110 + 2m base-6 digits (smallest seed x(0) with 86 decimal
     digits) and Family 2 has 108 + 2m base-6 digits (smallest seed y(0) with
-    84 decimal digits), with middle blocks linked by base-6 digit complement
-    d |-> 5 - d. Both satisfy the exact period-12 self-similar recurrence
+    84 decimal digits), with middle blocks linked by base-6 digit complement d
+    |-> 5 - d. Both satisfy the exact period-12 self-similar recurrence
     T^[12](x(m)) = x(m + 3) and T^[12](y(m)) = y(m + 3) while avoiding all
     base-6 palindromes, proving unconditionally that infinitely many base-6
     Lychrel numbers exist. Coverage by this package's Palomar comparison: of
     the companion paper's 10 main results, 2 are compared in Lean in full
-    (20%; Theorems 1 and 2) and 1 in part (Corollary 3: every x(m) and y(m) is
-    a base-6 Lychrel number, without its positivity and per-iterate form); 6
-    more (Lemma 4, Theorem 5, Proposition 6, Theorems 7 and 8 and Corollary
-    9) are proved in this package's Lean library but not compared, though the
-    compared statements include the disjointness of the two families and the
-    infinitude of base-6 Lychrel numbers; Proposition 10 is by certificate
-    only; Conjecture 11 is open and not counted.
+    (20%; Theorems 1 and 2) and 2 in part (Corollary 3: every x(m) and y(m) is
+    a base-6 Lychrel number, without its positivity and per-iterate form;
+    Theorem 7: the two families are disjoint, without the injectivity of all
+    six forward trajectories); 5 more (Lemma 4, Theorem 5, Proposition 6,
+    Theorem 8 and Corollary 9) are proved in this package's Lean library but
+    not compared, though the compared statements include the infinitude of
+    base-6 Lychrel numbers; Proposition 10 is by certificate only; Conjecture
+    11 is open and not counted.
   authors:
     - "Tyler B. Hughes"
   license: "Apache-2.0"
